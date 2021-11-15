@@ -984,7 +984,7 @@ interface AdminInterface
         $server,
         $isNew,
         CSRType $type,
-        $digest = null,
+        $digest,
         CSRKeySize $keysize,
         $c = null,
         $sT = null,
