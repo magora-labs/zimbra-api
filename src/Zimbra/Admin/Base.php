@@ -1452,7 +1452,7 @@ abstract class Base extends API implements AdminInterface
         $server,
         $isNew,
         CSRType $type,
-        $digest = null,
+        $digest,
         CSRKeySize $keysize,
         $c = null,
         $sT = null,
@@ -1463,6 +1463,8 @@ abstract class Base extends API implements AdminInterface
         array $subjectAltName = []
     )
     {
+        if (empty($digest)) { $digest = null; }
+        
         $request = new \Zimbra\Admin\Request\GenCSR(
             $server, $isNew, $type, $digest, $keysize, $c, $sT, $l, $o, $oU, $cN, $subjectAltName
         );
