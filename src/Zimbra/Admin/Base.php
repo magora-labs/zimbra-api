@@ -1805,8 +1805,10 @@ abstract class Base extends API implements AdminInterface
      * @param  bool   $apply   Apply config flag.
      * @return mix
      */
-    public function getAllServers($service = null, $alwaysOnClusterId, $applyConfig = null)
+    public function getAllServers($service, $alwaysOnClusterId, $applyConfig = null)
     {
+        if (empty($service)) { $service = null; }
+        
         $request = new \Zimbra\Admin\Request\GetAllServers(
             $service, $alwaysOnClusterId, $applyConfig
         );
