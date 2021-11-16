@@ -1208,7 +1208,7 @@ interface AdminInterface
      * @param  bool   $apply   Apply config flag.
      * @return mix
      */
-    function getAllServers($service = null, $alwaysOnClusterId, $applyConfig = null);
+    function getAllServers($service, $alwaysOnClusterId, $applyConfig = null);
 
     /**
      * Get all installed skins on the server.
